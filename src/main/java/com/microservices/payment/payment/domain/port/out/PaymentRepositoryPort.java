@@ -7,10 +7,13 @@ import java.util.Optional;
 
 public interface PaymentRepositoryPort {
     Payment save(Payment payment);
-    Payment update(Long id, Payment payment);
     Optional<Payment> findById(Long id);
     PageDomain<Payment> findText(String text, int page, int size);
     PageDomain<Payment> list(int page, int size);
+    Payment advance(Payment payment);
+    Payment failed(Payment payment);
+    Payment refunded(Payment payment);
+    Payment expire(Payment payment);
     boolean existsActivePaymentByOrderId(Long orderId);
 
 }

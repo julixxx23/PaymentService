@@ -15,7 +15,7 @@ public class AdvanceStatusUseCase implements AdvanceStatusPaymentPort {
         Payment payment = paymentRepositoryPort.findById(id)
                 .orElseThrow(() -> new PaymentNotFoundException(id));
         payment.advanceStatus();
-        return paymentRepositoryPort.save(payment);
+        return paymentRepositoryPort.advance(payment);
     }
 
 }

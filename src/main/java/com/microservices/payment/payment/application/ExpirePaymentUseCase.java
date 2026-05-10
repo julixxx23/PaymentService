@@ -15,6 +15,6 @@ public class ExpirePaymentUseCase implements ExpirePaymentPort {
         Payment payment = paymentRepositoryPort.findById(id)
                 .orElseThrow(() -> new PaymentNotFoundException(id));
         payment.expire();
-        return paymentRepositoryPort.save(payment);
+        return paymentRepositoryPort.expire(payment);
     }
 }
