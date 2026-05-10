@@ -6,5 +6,5 @@ public record PageDomain <T>(
         List<T> content,
         int currentPage,
         int totalPages,
-        int totalElements
+        long totalElements
 ){}

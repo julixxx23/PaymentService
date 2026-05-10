@@ -15,6 +15,6 @@ public class FailedPaymentUseCase implements FailedPaymentPort {
         Payment payment = paymentRepositoryPort.findById(id)
                 .orElseThrow(() -> new PaymentNotFoundException(id));
         payment.failed();
-        return paymentRepositoryPort.save(payment);
+        return paymentRepositoryPort.failed(payment);
     }
 }

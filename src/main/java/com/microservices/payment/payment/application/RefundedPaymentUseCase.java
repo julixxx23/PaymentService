@@ -15,6 +15,6 @@ public class RefundedPaymentUseCase implements RefundedPaymentPort {
         Payment payment = paymentRepositoryPort.findById(id)
                 .orElseThrow(() -> new PaymentNotFoundException(id));
         payment.refunded();
-        return paymentRepositoryPort.save(payment);
+        return paymentRepositoryPort.refunded(payment);
     }
 }
