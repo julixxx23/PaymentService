@@ -19,7 +19,7 @@ public class PaymentPersistenceMapper {
                 .attempts(entity.getAttempts())
                 .createdAt(entity.getCreatedAt())
                 .updateAt(entity.getUpdateAt())
-                .expiresAt(entity.getExpireAt())
+                .expireAt(entity.getExpireAt())
                 .originIp(entity.getOriginIp())
                 .currencyMethod(entity.getCurrencyMethod())
                 .paymentMethod(entity.getPaymentMethod())
@@ -38,7 +38,7 @@ public class PaymentPersistenceMapper {
         entity.setAttempts(payment.getAttempts());
         entity.setCreatedAt(payment.getCreatedAt());
         entity.setUpdateAt(payment.getUpdateAt());
-        entity.setExpireAt(payment.getExpiresAt());
+        entity.setExpireAt(payment.getExpireAt());
         entity.setOriginIp(payment.getOriginIp());
         entity.setPaymentMethod(payment.getPaymentMethod());
         entity.setPaymentStatus(payment.getPaymentStatus());

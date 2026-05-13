@@ -33,7 +33,7 @@ public class SavePaymentUseCase implements SavePaymentPort {
                 .paymentStatus(PaymentStatus.PENDING)
                 .createdAt(LocalDateTime.now())
                 .updateAt(LocalDateTime.now())
-                .expiresAt(LocalDateTime.now().plusSeconds(180))
+                .expireAt(LocalDateTime.now().plusSeconds(180))
                 .build();
 
         return paymentRepositoryPort.save(newPayment);

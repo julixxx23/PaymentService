@@ -20,51 +20,49 @@ public class PaymentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_payment")
+    @Column(name = "ID_PAYMENT")
     private Long idPayment;
 
-    @Column(name = "id_order")
+    @Column(name = "ID_ORDER")
     private Long idOrder;
 
-    @Column(name = "id_user")
+    @Column(name = "ID_USER")
     private Long idUser;
 
-    @Column(name = "total", nullable = false)
+    @Column(name = "TOTAL", nullable = false)
     private BigDecimal total;
 
-    @Column(name = "description", nullable = false, length = 225)
+    @Column(name = "DESCRIPTION", nullable = false, length = 225)
     private String description;
 
-    @Column(name = "paymentReference", nullable = false, length = 225)
+    @Column(name = "PAYMENTREFERENCE", nullable = false, length = 225)
     private String paymentReference;
 
-    @Column(name = "attempts", nullable = false)
+    @Column(name = "ATTEMPTS", nullable = false)
     private Integer attempts;
 
-    @Column(name = "createdAt", nullable = false, updatable = false)
+    @Column(name = "CREATEDAT", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "updateAt", nullable = false)
+    @Column(name = "UPDATEAT", nullable = false)
     private LocalDateTime updateAt;
 
-    @Column(name = "expireAt", nullable = false, updatable = false)
+    @Column(name = "EXPIRESAT", nullable = false, updatable = false)
     private LocalDateTime expireAt;
 
-    @Column(name = "originIp", nullable = false, length = 45)
+    @Column(name = "ORIGINIP", nullable = false, length = 45)
     private String originIp;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "currency", nullable = false, length = 10)
+    @Column(name = "CURRENCY", nullable = false, length = 10)
     private CurrencyMethod currencyMethod;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "paymentMethod", nullable = false, length = 10)
+    @Column(name = "PAYMENTMETHOD", nullable = false, length = 10)
     private PaymentMethod paymentMethod;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "paymentStatus", nullable = false, length = 12)
+    @Column(name = "PAYMENTSTATUS", nullable = false, length = 12)
     private PaymentStatus paymentStatus;
-
-
 
 }

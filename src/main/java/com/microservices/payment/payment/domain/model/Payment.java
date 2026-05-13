@@ -23,7 +23,7 @@ public class Payment {
     private Integer attempts;
     private LocalDateTime createdAt;
     private LocalDateTime updateAt;
-    private LocalDateTime expiresAt;
+    private LocalDateTime expireAt;
     private String originIp;
     private PaymentMethod paymentMethod;
     private PaymentStatus paymentStatus;
